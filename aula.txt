@@ -1,0 +1,56 @@
+
+1:Estados
+Tempo = int
+Aluno = string
+Zelador = string
+Cientista = string
+Profesor = string
+E0 = Aluno = e, Zelador = e, Cientista = e, Professor = e, tempo = 0
+E0 = Aluno = d, Zelador = d, Cientista = d, Professor = d, tempo <= 17
+2: Regras de transição:
+Aluno = e
+Zelador = e
+Cientista = e
+Professor = e
+Aluno = d
+Zelador = d
+Cientista = d
+Professor = d
+If(Aluno == zelador){
+	tempo+= 5
+}
+If(Aluno == cientista){
+	tempo+= 10
+}
+If(Aluno == professor){
+	tempo+= 2
+}
+if(aluno){
+tempo+= 1
+}
+if(zelador == cientista){
+Tempo+= 10
+}
+if(zelador == professora){
+Tempo+= 5
+}
+if(zelador){
+Tempo+= 5
+}
+if(cientista == professor){
+Tempo+= 10
+}
+if(cientista){
+Tempo+= 10
+}
+if(professor){
+Tempo+= 2
+}
+3: Restrições:
+
+4:Visitados:
+[“d|e|e|d, d|d|e|e]
+
+5: Função objetivo:
+Aluno  == d && zelador == d && cientista == d && professor == d && tempo <= 17
+
